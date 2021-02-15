@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#69709a"
+
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_calendrier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:title="@string/menu_calendrier"
+            app:titleTextColor="#FFFFFF" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#8085ABC5">
+
+                <Button
+                    android:id="@+id/chargement_EDT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/charger_l_emploi_du_temps_actuel" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/semaines"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#8085ABC5"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/semaine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/choisir_une_semaine"
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+
+                <Spinner
+                    android:id="@+id/spinner_semaine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/semaine"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="@+id/semaine"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#8085ABC5">
+
+                <TextView
+                    android:layout_width="28dp"
+                    android:layout_height="match_parent"
+
+                    android:gravity="center"
+                    android:text="@string/espace"
+                    android:textColor="#000000"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    tools:ignore="SmallSp"
+                    tools:layout_conversion_absoluteHeight="30dp"
+                    tools:layout_conversion_absoluteWidth="206dp"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="48dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/lun"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/mar"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/mer"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/jeu"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/ven"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/sam"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--image du background-->
+
+                <ImageView
+                    android:id="@+id/bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/todo"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/background" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!--les jours marqués en haut-->
+                    <!--le corps de l'emploi du temps-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false">
+
+                        <!--layout du bar de temps à gauche-->
+                        <LinearLayout
+                            android:id="@+id/left_view_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:background="#80FFFFFF"
+                                android:text="@string/_07h00"
+                                android:textColor="#000000"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:background="#80FFFFFF"
+                                android:text="@string/_08h00"
+                                android:textColor="#000000"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:background="#80FFFFFF"
+                                android:text="@string/_09h00"
+                                android:textColor="#000000"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:background="#80FFFFFF"
+                                android:text="@string/_10h00"
+                                android:textColor="#000000"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:background="#80FFFFFF"
+                                android:text="@string/_11h00"
+                                android:textColor="#000000"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:background="#80FFFFFF"
+                                android:text="@string/_12h00"
+                                android:textColor="#000000"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:background="#80FFFFFF"
+                                android:text="@string/_13h00"
+                                android:textColor="#000000"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:background="#80FFFFFF"
+                                android:text="@string/_14h00"
+                                android:textColor="#000000"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:background="#80FFFFFF"
+                                android:text="@string/_15h00"
+                                android:textColor="#000000"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:background="#80FFFFFF"
+                                android:text="@string/_16h00"
+                                android:textColor="#000000"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:background="#80FFFFFF"
+                                android:text="@string/_17h00"
+                                android:textColor="#000000"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:background="#80FFFFFF"
+                                android:text="@string/_18h00"
+                                android:textColor="#000000"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:background="#80FFFFFF"
+                                android:text="@string/_19h00"
+                                android:textColor="#000000"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:background="#80FFFFFF"
+                                android:text="@string/_20h00"
+                                android:textColor="#000000"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:background="#80FFFFFF"
+                                android:text="@string/_21h00"
+                                android:textColor="#000000"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:background="#80FFFFFF"
+                                android:text="@string/_22h00"
+                                android:textColor="#000000"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:background="#80FFFFFF"
+                                android:text="@string/_23h00"
+                                android:textColor="#000000"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="70dp"
+                                android:background="#80FFFFFF"
+                                android:text="@string/_00_00"
+                                android:textColor="#000000"
+                                android:textSize="10sp" />
+
+
+                        </LinearLayout>
+                        <!--layout des séances-->
+                        <RelativeLayout
+                            android:id="@+id/lundi"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"/>
+
+                        <RelativeLayout
+                            android:id="@+id/mardi"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical" />
+
+                        <RelativeLayout
+                            android:id="@+id/mercredi"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical" />
+
+                        <RelativeLayout
+                            android:id="@+id/jeudi"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical" />
+
+                        <RelativeLayout
+                            android:id="@+id/vendredi"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical" />
+
+                        <RelativeLayout
+                            android:id="@+id/samedi"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/barre_navigation_calendrier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        app:itemIconTint="#ECECEC"
+        app:itemTextColor="#ECECEC"
+        android:state_checked="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/barre_navigation" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

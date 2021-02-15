@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.projet">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:name=".application.App"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.example.projet.AutresActivity" />
+        <activity android:name="com.example.projet.DispoSalleActivity" >
+
+        </activity>
+        <activity android:name="com.example.projet.ProfListeActivity" />
+        <activity android:name="com.example.projet.SauvegardeActivity" />
+        <activity android:name="com.example.projet.ParamActivity" />
+        <activity android:name="com.example.projet.NotifActivity" />
+        <activity android:name="com.example.projet.AbsenceActivity" />
+        <activity android:name=".InputValidation"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".ConfirmPassword" />
+        <activity android:name="com.example.projet.AjouterAbsence" />
+        <activity
+            android:name=".Mdpoubli"
+            android:label="@string/mot_de_passe_oubli"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/inscription"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".LoginActivity"
+            android:configChanges="orientation|screenSize">
+
+        </activity>
+        <activity android:name="com.example.projet.AjoutAgendaActivity" />
+        <activity android:name="com.example.projet.HistoriqueActivity"></activity>
+        <activity android:name="com.example.projet.AjoutAbsenceActivity" />
+        <activity android:name="com.example.projet.HistoriqueAbsence"></activity>
+        <activity android:name="com.example.projet.activities.AlarmeActivity">
+        </activity>
+        <activity android:name="com.example.projet.SplashActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+
+        <activity android:name="com.example.projet.activities.RingActivity">
+        </activity>
+
+        <receiver android:name="com.example.projet.broadcastreceiver.AlarmBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.example.projet.service.AlarmService" />
+        <service android:name="com.example.projet.service.RescheduleAlarmsService" />
+        <activity android:name="com.example.projet.MainActivity"
+            android:configChanges="orientation|screenSize">
+
+
+        </activity>
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="types_salles">
+        <item >Veuillez choisir un type :</item>
+        <item >Salle TD</item>
+        <item >Labo informatique</item>
+        <item >Labo électronique</item>
+        <item >Labo spécifique</item>
+    </string-array>
+</resources>

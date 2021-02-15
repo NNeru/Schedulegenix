@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NotifActivity">
+
+    <ScrollView
+        android:id="@+id/Noti_f"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="86dp"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/todo"
+                        app:srcCompat="@drawable/ic_launcher_playstore" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:drawableEnd="@android:drawable/ic_menu_info_details"
+                            android:text="@string/schedulegenix"
+                            android:textSize="24sp"
+                            tools:ignore="NestedWeights" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/version_1_0" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtNotif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/notifications"
+                android:textSize="25sp" />
+
+            <Switch
+                android:id="@+id/switchAutoris"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="#D6EDF6"
+                android:text="@string/autorisation_de_notifier"
+                android:textColorHighlight="#68C2E8"
+                android:textColorHint="#ffffff"
+                android:textColorLink="#68C2E8"
+                android:textCursorDrawable="@android:color/holo_blue_dark"
+                android:textSize="18sp" />
+
+            <Switch
+                android:id="@+id/switchActiver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="#D6EDF6"
+                android:text="@string/activer_les_notifications"
+                android:textColorHighlight="#68c2e8"
+                android:textColorHint="#ffffff"
+                android:textColorLink="#68c2e8"
+                android:textCursorDrawable="@android:color/holo_blue_dark"
+                android:textSize="18sp" />
+
+            <Switch
+                android:id="@+id/switchPasevnt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="#D6EDF6"
+                android:text="@string/notifier_s_il_n_y_a_pas_d_v_nements"
+                android:textColorHighlight="#68c2e8"
+                android:textColorHint="#ffffff"
+                android:textColorLink="#68c2e8"
+                android:textCursorDrawable="@android:color/holo_blue_dark"
+                android:textSize="18sp" />
+
+            <Switch
+                android:id="@+id/switchFenetre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="#D6EDF6"
+                android:text="@string/fen_tre_contextuelle_l_cran"
+                android:textColorHighlight="#68c2e8"
+                android:textColorHint="#ffffff"
+                android:textColorLink="#68c2e8"
+                android:textCursorDrawable="@android:color/holo_blue_dark"
+                android:textSize="18sp" />
+
+            <Switch
+                android:id="@+id/switchSon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="#D6EDF6"
+                android:text="@string/son"
+                android:textColorHighlight="#68C2E8"
+                android:textColorHint="#FFFFFF"
+                android:textColorLink="#68C2E8"
+                android:textCursorDrawable="@android:color/holo_blue_dark"
+                android:textSize="18sp" />
+
+            <Switch
+                android:id="@+id/switchVibreur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="#D6EDF6"
+                android:text="@string/vibreur"
+                android:textColor="#000000"
+                android:textColorHighlight="#68c2e8"
+                android:textColorHint="#ffffff"
+                android:textColorLink="#68c2e8"
+                android:textCursorDrawable="@android:color/holo_blue_dark"
+                android:textSize="18sp" />
+
+            <Switch
+                android:id="@+id/switchBadge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="#D6EDF6"
+                android:text="@string/badge_d_ic_ne_d_application"
+                android:textColorHighlight="#68C2E8"
+                android:textColorHint="#FFFFFF"
+                android:textColorLink="#68C2E8"
+                android:textCursorDrawable="@android:color/holo_blue_dark"
+                android:textSize="18sp" />
+
+            <Switch
+                android:id="@+id/switchVerrouillage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="#D6EDF6"
+                android:text="@string/notifications_sur_l_cran_de_verrouillage"
+                android:textColorHighlight="#68C2E8"
+                android:textColorHint="#FFFFFF"
+                android:textColorLink="#68C2E8"
+                android:textCursorDrawable="@android:color/holo_blue_dark"
+                android:textSize="18sp" />
+
+            <Switch
+                android:id="@+id/switchNepasderanger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="#D6EDF6"
+                android:text="@string/autorisation_de_notifier_lorsque_la_fonction_ne_pas_d_ranger_est_d_finie"
+                android:textColorHighlight="#68c2e8"
+                android:textColorHint="#ffffff"
+                android:textColorLink="#68c2e8"
+                android:textCursorDrawable="@android:color/holo_blue_dark"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

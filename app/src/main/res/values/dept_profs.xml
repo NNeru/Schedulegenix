@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dept_profs">
+        <item >Veuillez choisir un département :</item>
+        <item >APS</item>
+        <item >Dept. ISYS</item>
+        <item >Dept. SEN</item>
+        <item >Dept. MTEL</item>
+        <item >Dept. IT</item>
+    </string-array>
+</resources>
