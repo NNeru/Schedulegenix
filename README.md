@@ -5,3 +5,5 @@ Hawa NDAO
 Jomalia RAPSODE
 Neil-Matthieu RAMANOELINA
 Andrianihary RAZAFINDRAMISA
+
+Application android d'emploi du temps réalisé en langage Java sur AndroidStudio
